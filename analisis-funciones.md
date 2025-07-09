@@ -1,27 +1,30 @@
-# Análisis SonarQube - Funciones Específicas
+# Análisis SonarQube - Módulo de Pruebas
 
-## Archivos incluidos en el análisis:
+## Archivo incluido en el análisis:
 
-### 1. usuarioController.js
-**Ruta:** `servidor/src/controllers/usuarioController.js`
-**Función principal a analizar:** `actualizarUsuario`
-- **Líneas aproximadas:** 126-278
+### 1. pruebas.js
+**Ruta:** `servidor/src/sonarQ/pruebas.js`
+**Funciones principales a analizar:**
+
+#### Función `actualizarUsuario`
+- **Líneas:** 1-142
 - **Descripción:** Función que maneja la actualización de usuarios existentes
 - **Características clave:**
-  - Validación de permisos según rol
+  - Validación de permisos según rol (recepcionista, odontologo, administrador)
   - Verificación de datos únicos (email, cédula)
+  - Control de acceso granular por tipo de usuario
+  - Prevención de auto-eliminación de administradores
   - Actualización de perfil completo
-  - Manejo de errores y validaciones
+  - Manejo comprehensivo de errores y validaciones
 
-### 2. authController.js  
-**Ruta:** `servidor/src/controllers/authController.js`
-**Función principal a analizar:** `completarPerfil`
-- **Líneas aproximadas:** 219-285
-- **Descripción:** Función que permite completar el perfil de usuario
+#### Función `obtenerPerfil`
+- **Líneas:** 143-164
+- **Descripción:** Función que obtiene el perfil del usuario autenticado
 - **Características clave:**
-  - Validación de datos del perfil
-  - Actualización de información personal
-  - Marcado de perfil como completo
+  - Autenticación basada en middleware
+  - Exclusión de información sensible (contraseñas)
+  - Manejo de errores de base de datos
+  - Respuestas estructuradas
 
 ## Configuración de SonarQube
 
