@@ -1,0 +1,6 @@
+projectKey=Pruebas_SeleDental
+serverUrl=http://localhost:9000
+serverVersion=25.1.0.102122
+dashboardUrl=http://localhost:9000/dashboard?id=Pruebas_SeleDental
+ceTaskId=d420d312-86d6-4a61-8f62-29b6c371dd9b
+ceTaskUrl=http://localhost:9000/api/ce/task?id=d420d312-86d6-4a61-8f62-29b6c371dd9b
